@@ -83,7 +83,7 @@ mostrarResultadosCirculo();
 
 let numeroMultiplar = 4;
 
-function tableDeMultiplicar(numero) {
+function tablaDeMultiplicar(numero) {
     for (i = 0; i < 11; i++){
         let resultado = i * numero;
         console.log(`${numero} x ${i} = ${resultado}`)
@@ -91,5 +91,5 @@ function tableDeMultiplicar(numero) {
     return;
 }
 
-tableDeMultiplicar(numeroMultiplar);
+tablaDeMultiplicar(numeroMultiplar);
 
