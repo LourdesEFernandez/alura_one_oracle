@@ -41,19 +41,11 @@ console.log(`$${dolares} equivale a ${cambioReales} reales`);
 
 let base = 14;
 let altura = 18;
-let area = calcularArea(base,altura);
-let perimetro = calcularPerimetro(base,altura);
-
-function calcularArea(base,altura) {
-    return base*altura;
-}
-
-function calcularPerimetro(base,altura) {
-    return 2*(base+altura);
-}
+let areaRectangulo = base*altura;;
+let perimetroRectangulo = 2*(base+altura);
 
 function mostrarResultados(){
-    alert(`Para una sala rectangular de base ${base} y altura ${altura} tenemos un perimetro de ${perimetro} y un area de ${area}`)
+    console.log(`Para una sala rectangular de base ${base} y altura ${altura} tenemos un perimetro de ${perimetroRectangulo} y un area de ${areaRectangulo}`);
 }
 
 mostrarResultados();
@@ -62,29 +54,21 @@ mostrarResultados();
 
 let radio = 25;
 const pi =3.14;
-let areaCirculo = calcularAreaCircular(radio);
-let perimetroCirculo = calcularPerimetroCircular(radio);
-
-function calcularAreaCircular(radio) {
-    return pi*radio**2
-}
-
-function calcularPerimetroCircular(radio) {
-    return 2*pi*radio;
-}
+let areaCirculo = pi*radio**2;
+let perimetroCirculo = 2*pi*radio;
 
 function mostrarResultadosCirculo() {
-    alert(`Para una sala circular de radio ${radio} tenemos un perimetro de ${perimetroCirculo} y un area de ${areaCirculo}`)
+    console.log(`Para una sala circular de radio ${radio} tenemos un perimetro de ${perimetroCirculo} y un area de ${areaCirculo}`);
 }
 
 mostrarResultadosCirculo();
 
 // Crea una función que muestre en pantalla la tabla de multiplicar de un número dado como parámetro.
 
-let numeroMultiplar = 4;
+let numeroMultiplar = 7;
 
 function tablaDeMultiplicar(numero) {
-    for (i = 0; i < 11; i++){
+    for (i = 0; i <= 10; i++){
         let resultado = i * numero;
         console.log(`${numero} x ${i} = ${resultado}`)
     }
