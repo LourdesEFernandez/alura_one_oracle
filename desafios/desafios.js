@@ -16,7 +16,7 @@ let factorial = calcularFactorial(numero);
 
 function calcularFactorial(numeroDeseado){
     let factorial = 1;
-    for (i = 1; i < numeroDeseado; i++ ){
+    for (i = 1; i <= numeroDeseado; i++ ){
         factorial += factorial * i;
     };
     return factorial;
@@ -77,3 +77,4 @@ function tablaDeMultiplicar(numero) {
 
 tablaDeMultiplicar(numeroMultiplar);
 
+// Has sido encargado(a) de crear un pequeño programa para gestionar una lista de compras. El programa debe permitir que el usuario agregue elementos a la lista y luego mostrar el contenido de la lista en la pantalla. Además, el usuario debe poder ver un elemento específico de la lista ingresando el índice del elemento deseado.

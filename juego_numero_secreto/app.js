@@ -3,6 +3,7 @@ let numInicio = 1;
 let numFin = 20;
 let numeroSecreto;
 let intentos;
+let listaNumeros = [];
 
 // funcion para asignar texto
 function asignarTextoElemento(etiqueta,texto){
@@ -17,7 +18,8 @@ function presentacion(){
     asignarTextoElemento('p','Elige un número del ' + numInicio + ' al ' + numFin);
     numeroSecreto = generarNumero(numInicio,numFin);
     intentos = 1;
-    console.log(numeroSecreto);
+
+    console.log(listaNumeros);
 };
 
 // boton para comparar números
@@ -43,7 +45,19 @@ function comparadorNumero(){
 
 // generador de número aleatorio
 function generarNumero(ini,fin) {
-    return Math.floor(Math.random()*fin)+ini;
+    let numeroGenerado = Math.floor(Math.random()*fin)+ini;
+// comprobar si ya salieron todos los numeros posibles
+    if (listaNumeros.length == numFin){
+        asignarTextoElemento('p','Todos los números posibles ya fueron jugados.');
+    } else {
+    // comprobar si el numero ya se encuentra en la lista
+        if(listaNumeros.includes(numeroGenerado)){
+            return generarNumero(numInicio,numFin);
+        } else {
+            listaNumeros.push(numeroGenerado);
+            return numeroGenerado;
+        }
+    }
 }
 
 // limpiar la caja 
@@ -61,3 +75,6 @@ function reiniciar() {
 
 // llamada a la presentación
 presentacion();
+
+
+// [] 
